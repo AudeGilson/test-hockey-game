@@ -3,10 +3,12 @@ package com.maplr.testhockeygame.mapper;
 import com.maplr.testhockeygame.model.Player;
 import com.maplr.testhockeygame.dto.PlayerDto;
 import org.mapstruct.AfterMapping;
-import org.mapstruct.BeforeMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
+/**
+ * The mapper between Player model and Player DTO.
+ */
 @Mapper(componentModel = "spring")
 public interface PlayerMapper {
 
