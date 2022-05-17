@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.maplr.testhockeygame.model.enums.Position;
 import lombok.Data;
 
+/**
+ * Player DTO.
+ */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PlayerDto {

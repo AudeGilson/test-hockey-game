@@ -20,17 +20,23 @@ public class Player {
     @Column(name = "PLAYER_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @Column (nullable = false)
     private Long number;
+
     @Column (nullable = false)
     private String name;
+
     @Column (nullable = false)
     private String lastname;
+
     @Column (nullable = false)
     @Enumerated(EnumType.STRING)
     private Position position;
+
     @Column(nullable = false)
     private Boolean isCaptain;
+
    @ToString.Exclude
    @ManyToOne
    @JoinColumn(name = "TEAM_ID")

@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.util.ArrayList;
 
+/**
+ * Team DTO.
+ */
 @Data
 public class TeamDto {
     private Long id;

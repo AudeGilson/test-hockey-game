@@ -49,8 +49,8 @@ public class TeamController {
      * @return Code 201 with the new added player
      * @throws TeamNotFoundException if no team is found for the giving year
      */
-    @PostMapping("{Year}")
-    public ResponseEntity<PlayerDto> createPlayer(@PathVariable(value = "Year") Long year, @RequestBody PlayerDto newPlayer) throws TeamNotFoundException {
+    @PostMapping("{year}")
+    public ResponseEntity<PlayerDto> createPlayer(@PathVariable Long year, @RequestBody PlayerDto newPlayer) throws TeamNotFoundException {
         Player createdPlayer = teamService.addPlayerToTeam(year, playerMapper.fromDto(newPlayer));
         return ResponseEntity.created(URI.create("")).body(playerMapper.toDto(createdPlayer));
     }

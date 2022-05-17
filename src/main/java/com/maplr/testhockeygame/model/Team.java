@@ -23,10 +23,13 @@ public class Team {
     @Column(name = "TEAM_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column (nullable = false)
     private String coach;
+
     @Column (nullable = false)
     private Long year;
+
     @OneToMany(mappedBy = "team")
     private List<Player> players;
 }

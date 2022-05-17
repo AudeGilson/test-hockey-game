@@ -57,8 +57,6 @@ public class PlayerService implements IPlayerService{
             currentCaptain.setIsCaptain(false);
             playerRepository.save(currentCaptain);
         }
-
-
     }
 
 

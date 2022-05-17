@@ -33,8 +33,8 @@ public class PlayerController {
      * @throws PlayerNotFoundException if the player is not found
      * @throws TeamNotFoundException if the team of the player is not found
      */
-    @PutMapping("/captain/{ID}")
-    public ResponseEntity<PlayerDto> setCaptain(@PathVariable(value = "ID") Long id) throws PlayerNotFoundException, TeamNotFoundException {
+    @PutMapping("/captain/{id}")
+    public ResponseEntity<PlayerDto> setCaptain(@PathVariable Long id) throws PlayerNotFoundException, TeamNotFoundException {
         return ResponseEntity.ok( playerMapper.toDto(playerService.setCaptain(id)));
     }
 
